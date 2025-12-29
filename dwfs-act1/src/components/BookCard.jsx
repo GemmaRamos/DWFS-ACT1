@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../hooks/useCart';
 import '../styles/book-card.css';
+import {FaCartPlus} from "react-icons/fa";
 
 const BookCard = ({ book }) => {
     const { addToCart } = useCart();
@@ -24,6 +25,7 @@ const BookCard = ({ book }) => {
                         className="nav-button"
                         onClick={() => addToCart(book)}
                     >
+                        <FaCartPlus/>
                         Añadir al carrito
                     </button>
                 </div>

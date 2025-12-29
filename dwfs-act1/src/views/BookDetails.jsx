@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useBooks } from '../hooks/useBooks';
 import { useCart } from '../hooks/useCart';
 import '../styles/book-details.css';
+import {FaCartPlus} from "react-icons/fa";
 
 const BookDetails = () => {
     const { id } = useParams();
@@ -63,7 +64,11 @@ const BookDetails = () => {
                         </div>
                         {/* Botón añadir al carrito */}
                         <div className="book-actions">
-                            <button className="nav-button add-cart" onClick={() => addToCart(book)}>
+                            <button
+                                className="nav-button"
+                                onClick={() => addToCart(book)}
+                            >
+                                <FaCartPlus/>
                                 Añadir al carrito
                             </button>
                         </div>

@@ -24,16 +24,19 @@ body {
 }
 
 .nav-button {
-  display: inline-block;
+  display: flex;
   background: #1a2a4b;
   color: #ffd25a;
   border-radius: 8px;
   border: none;
   padding: 0.8rem 1.5rem;
   font-weight: 600;
+  font-size: 0.9rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  align-items: center;
+  gap: 8px;
 }
 .nav-button:hover {
   background: #2b3b6b;
