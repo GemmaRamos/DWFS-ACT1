@@ -1,16 +1,61 @@
-# React + Vite
+# Relatos de Papel - React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React** y **Vite** que simula una tienda de libros. Permite explorar un catálogo, buscar libros por título, ver detalles y gestionar un carrito de compra.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## React Compiler
+- Listado de libros con información básica
+- Búsqueda por título (insensible a mayúsculas y tildes)
+- Vista de detalle de cada libro
+- Carrito de compra
+    - Añadir libros
+    - Modificar cantidades
+    - Ver resumen del pedido
+- Página de checkout y confirmación de pago
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tecnologías usadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router DOM
+- JavaScript (ES6+)
+- CSS puro
+- Context API + Custom Hooks
+- Vite / Create React App  
+
+---
+
+## Custom Hooks
+
+### `useCart`
+Gestiona toda la lógica del carrito:
+- Añadir libros
+- Incrementar / decrementar cantidades
+- Calcular total de artículos
+- Calcular precio total
+- Vaciar carrito
+
+---
+
+### `useBooks`
+Encapsula el acceso a los datos de libros:
+- Filtrar libros por título
+- Obtener un libro por `id`
+
+---
+
+### `useRedirection`
+Hook reutilizable para redirecciones automáticas
+
+
+---
+## Instalación y ejecución
+
+En el directorio del proyecto ejecuta:
+
+npm install
+
+npm start
