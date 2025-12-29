@@ -24,14 +24,6 @@ const CheckoutPage = () => {
         }
     }, [success, clearCart, navigate]);
 
-    if (cart.length === 0 && !success) {
-        return (
-            <div className="home-page">
-                <h2>No hay productos para pagar</h2>
-            </div>
-        );
-    }
-
     return (
         <div className="home-page checkout-page">
             <h1>Checkout</h1>

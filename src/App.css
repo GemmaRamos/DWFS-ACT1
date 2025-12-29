@@ -14,11 +14,11 @@ body {
 }
 
 .home-page {
-  min-height: 75vh;
+  min-height: 70vh;
 }
 .landing, .home-page {
   padding: 2rem;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   flex: 1;
 }

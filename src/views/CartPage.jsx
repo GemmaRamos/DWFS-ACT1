@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCart } from '../hooks/useCart';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles/cart-page.css';
 
 const CartPage = () => {
@@ -17,7 +17,12 @@ const CartPage = () => {
         return (
             <div className="home-page">
                 <h2>El carrito está vacío</h2>
-                <Link to="/books" className="nav-button">Volver al inicio</Link>
+                <button
+                    onClick={() => navigate(-1)}
+                    className="nav-button"
+                >
+                    ← Volver
+                </button>
             </div>
         );
     }

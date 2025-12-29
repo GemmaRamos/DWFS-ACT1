@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useCart } from '../hooks/useCart';
-import '../styles/book-card.css';
+import { useNavigate } from 'react-router-dom';
 import {FaCartPlus} from "react-icons/fa";
+import '../styles/book-card.css';
 
 const BookCard = ({ book }) => {
     const { addToCart } = useCart();
-
+    const navigate = useNavigate();
     return (
         <div className="book">
             <div className="book-left">
@@ -18,9 +18,12 @@ const BookCard = ({ book }) => {
                     <p><strong>Valoración:</strong> ⭐ {book.rating}</p>
                 </div>
                 <div className="book-actions">
-                    <Link to={`/book/${book.id}`} className="nav-button">
+                    <button
+                        className="nav-button"
+                        onClick={() => navigate(`/book/${book.id}`)}
+                    >
                         Ver detalles
-                    </Link>
+                    </button>
                     <button
                         className="nav-button"
                         onClick={() => addToCart(book)}
