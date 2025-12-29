@@ -6,15 +6,20 @@ export const useBooks = () => {
     const { title, changeTitle } = useContext(BookContext);
 
     // Filtra libros según el título
+    const normalizeText = (text) =>
+        text
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, ''); // esto evita errores en búsquedas de títulos con tildes
+
+    const normalizedTitle = normalizeText(title);
     const books = title.trim() === ''
         ? booksData       // muestra todos si no hay búsqueda
         : booksData.filter(book =>
-            book.title.toLowerCase().includes(title.toLowerCase())
+            normalizeText(book.title).includes(normalizedTitle)
         );
 
     const getBookById = (id) => booksData.find(book => book.id === Number(id));
-
-    const getAllBooks = () => booksData;
 
     return {
         // Estado
@@ -23,7 +28,6 @@ export const useBooks = () => {
         changeTitle,
         // Datos derivados
         books,
-        getBookById,
-        getAllBooks
+        getBookById
     };
 };

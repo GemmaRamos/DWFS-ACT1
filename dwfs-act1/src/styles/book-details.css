@@ -28,7 +28,7 @@
 }
 
 .book-info-line div {
-    flex: 1 1 auto; /* ajustable para que todo quepa en una fila */
+    flex: 1 1 auto; /* para que quepa en una linea */
 }
 
 .book-main {
