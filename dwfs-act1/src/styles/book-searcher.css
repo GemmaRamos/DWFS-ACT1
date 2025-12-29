@@ -1,0 +1,31 @@
+.book-searcher {
+    margin: 10px;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid #b8860b;
+}
+.book-searcher label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #000000;
+}
+.book-searcher input[type="text"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    color: #000000;
+    background: #fff;
+}
+.book-searcher input[type="text"]:focus {
+    outline: none;
+    border-color: #2b3b6b;
+    box-shadow: 0 0 0 3px rgba(43,59,107,0.1);
+}
+.book-searcher input[type="text"]:hover {
+    border-color: #2b3b6b;
+}

@@ -1,0 +1,50 @@
+.checkout-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.checkout-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #2b3b6b;
+    padding-bottom: 0.5rem;
+}
+
+.checkout-summary {
+    margin-top: 1.5rem;
+}
+
+.checkout-item {
+    background: #fff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1rem;
+}
+
+.checkout-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.checkout-item p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+.checkout-item strong {
+    font-weight: 600;
+}
+
+.checkout-success {
+    background: #d4edda;
+    color: #56855e;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

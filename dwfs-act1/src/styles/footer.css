@@ -1,0 +1,9 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background: linear-gradient(135deg, #1a2a4b 0%, #2b3b6b 100%);
+    color: #ffd25a;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
